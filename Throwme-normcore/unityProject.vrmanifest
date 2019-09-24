@@ -1,0 +1,16 @@
+{
+  "source": "Unity",
+  "applications": [
+    {
+      "app_key": "application.generated.unity.holonspace.exe",
+      "launch_type": "url",
+      "url": "steam://launch/",
+      "action_manifest_path": "C:\\Users\\Root Interactive\\Documents\\Unity\\Throwme-normcore\\actions.json",
+      "strings": {
+        "en_us": {
+          "name": "Throwme-normcore [Testing]"
+        }
+      }
+    }
+  ]
+}
