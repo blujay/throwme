@@ -7,26 +7,20 @@ using Normal.Realtime;
     {
 
         private RealtimeTransform bob;
+        private RealtimeView bill;
 
         // Start is called before the first frame update
         void Start()
         {
             bob = gameObject.GetComponent<RealtimeTransform>();
-        }
-
-        // Update is called once per frame
-        void Update()
-        {
-            
+            bill = gameObject.GetComponent<RealtimeView>();
         }
 
         public void Grabbed()
         {
             bob.RequestOwnership();
+            bill.RequestOwnership();
         }
-        public void Released()
-        {
 
-        }
     }
 
