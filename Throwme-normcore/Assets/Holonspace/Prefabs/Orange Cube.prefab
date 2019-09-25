@@ -18,7 +18,8 @@ GameObject:
   - component: {fileID: 564206135788372502}
   - component: {fileID: 564206135788372490}
   - component: {fileID: 564206135788372493}
-  - component: {fileID: 2415202553952022291}
+  - component: {fileID: 4918848864185300039}
+  - component: {fileID: 2921233640952233721}
   m_Layer: 0
   m_Name: Orange Cube
   m_TagString: Untagged
@@ -162,7 +163,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 1
+  m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -202,7 +203,18 @@ MonoBehaviour:
   restoreOriginalParent: 0
   onPickUp:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2921233640952233721}
+        m_MethodName: Grabbed
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   onDetachFromHand:
     m_PersistentCalls:
       m_Calls: []
@@ -250,7 +262,7 @@ MonoBehaviour:
   _syncRotation: 1
   _syncScale: 1
   _extrapolation: 0
---- !u!114 &2415202553952022291
+--- !u!114 &4918848864185300039
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -259,9 +271,21 @@ MonoBehaviour:
   m_GameObject: {fileID: 564206135788372499}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c8c07ad1d83a15042bc1ef37bc4e03c5, type: 3}
+  m_Script: {fileID: 11500000, guid: 8f9e183cbafdbea4690151b070c92a32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  guid: 
-  decoratorComponents:
-  - {fileID: 564206135788372498}
+  cloneAction:
+    actionPath: /actions/default/in/GrabGrip
+    needsReinit: 0
+--- !u!114 &2921233640952233721
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 564206135788372499}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79b644fdac4c16d4a8e50054f27c5045, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
